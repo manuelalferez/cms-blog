@@ -3,9 +3,9 @@ import Header from './Header';
 
 const Layout = (props) => {
 	return (
-		<div>
+		<div className="flex flex-col h-screen">
 			<Header />
-			{props.children}
+			<div className="mb-auto">{props.children}</div>
 			<Footer />
 		</div>
 	);

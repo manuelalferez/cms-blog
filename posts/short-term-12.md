@@ -3,7 +3,7 @@ title: 'Short Term 12'
 date: '2020-05-24'
 ---
 
-[*Short Term 12 (Las vidas de Grace)*](https://www.imdb.com/title/tt2370248/), es una película que sin duda toca la fibra humana. La encuadraría dentro del mismo marco de películas como [*I, Daniel Blake (Yo, Daniel Blake)*](https://www.imdb.com/title/tt5168192) y [*Hors normes (Especiales)*](https://www.imdb.com/title/tt8655470). 
+[Short Term 12 (Las vidas de Grace)](https://www.imdb.com/title/tt2370248/), es una película que sin duda toca la fibra humana. La encuadraría dentro del mismo marco de películas como [I, Daniel Blake (Yo, Daniel Blake)](https://www.imdb.com/title/tt5168192) y [Hors normes (Especiales)](https://www.imdb.com/title/tt8655470). 
 
 *Short Term 12*, nos acerca al entorno de niños con pasados difíciles: abandonos, agresiones sexuales, físicas y psicológicas, etc. Quiero destacar las partes que nos conectan a la historia de los personajes; **las confesiones de los niños a Grace**. La paciencia, comprensión y dedicación de la asociación son impresionantes. 
 
