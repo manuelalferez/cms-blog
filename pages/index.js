@@ -7,7 +7,13 @@ const Index = ({ postList }) => {
 	return (
 		<div>
 			<Layout>
-				<ul className="space-y-4 flex grid justify-items-center pt-9">
+				<div className="flex justify-center pt-2">
+					<p className="max-w-xl p-2">
+						Hi, my name is Manuel and I am studying at the University of Jaén. Sharing project on GitHub.
+						Learning about Open Source.
+					</p>
+				</div>
+				<ul className="space-y-4 grid justify-items-center pt-9">
 					{postList.map((post) => {
 						return (
 							<li key={post.title} className="flex">

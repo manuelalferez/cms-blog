@@ -2,42 +2,36 @@ import { GetStaticPaths } from 'next';
 import fs from 'fs';
 import matter from 'gray-matter';
 import Layout from '../../components/Layout';
-import ReactMarkdown from "react-markdown";
-import rehypeRaw from "rehype-raw";
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 
 const Post = ({ content, title, date }) => {
 	return (
 		<Layout>
-			    <div className="space-y-2 text-justify max-w-xl mx-auto p-2 py-10">
-        <h1 className="text-2xl">{title}</h1>
-        <span className="text-sm text-gray-600">{date}</span>
-        <ReactMarkdown
-          className="space-y-7 py-2"
-          rehypePlugins={[rehypeRaw]}
-          components={{
-            a: ({ node, ...props }) => (
-              <a className="text-blue-800 hover:underline" {...props} />
-            ),
-            h1: ({ node, ...props }) => <h1 className="text-2xl" {...props} />,
-            h2: ({ node, ...props }) => (
-              <h2 className="text-xl font-semibold" {...props} />
-            ),
-            b: ({ node, ...props }) => <b className="font-bold" {...props} />,
-            ul: ({ node, ...props }) => (
-              <ul className="list-inside list-disc " {...props} />
-            ),
-            li: ({ node, ...props }) => <li className="pl-2" {...props} />,
-            p: ({ node, ...props }) => <p {...props} />,
-            img: ({ node, ...props }) => (
-              <div className="flex justify-center">
-                <img {...props} />
-              </div>
-            ),
-          }}
-        >
-          {content}
-        </ReactMarkdown>
-      </div>
+			<div className="space-y-2 text-justify max-w-xl mx-auto p-2 py-10">
+				<h1 className="text-2xl px-2">{title}</h1>
+				<span className="text-sm text-gray-600 px-2">{date}</span>
+				<ReactMarkdown
+					className="space-y-7 p-2"
+					rehypePlugins={[rehypeRaw]}
+					components={{
+						a: ({ node, ...props }) => <a className="text-blue-800 hover:underline" {...props} />,
+						h1: ({ node, ...props }) => <h1 className="text-2xl" {...props} />,
+						h2: ({ node, ...props }) => <h2 className="text-xl font-semibold" {...props} />,
+						b: ({ node, ...props }) => <b className="font-bold" {...props} />,
+						ul: ({ node, ...props }) => <ul className="list-inside list-disc " {...props} />,
+						li: ({ node, ...props }) => <li className="pl-2" {...props} />,
+						p: ({ node, ...props }) => <p {...props} />,
+						img: ({ node, ...props }) => (
+							<div className="flex justify-center">
+								<img {...props} />
+							</div>
+						),
+					}}
+				>
+					{content}
+				</ReactMarkdown>
+			</div>
 		</Layout>
 	);
 };
