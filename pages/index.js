@@ -1,9 +1,9 @@
 import Layout from '../components/Layout.js';
-import Link from "next/link";
+import Link from 'next/link';
 import fs from 'fs';
 import matter from 'gray-matter';
 
-const Index = ({postList}) => {
+const Index = ({ postList }) => {
 	return (
 		<div>
 			<Layout>
@@ -12,9 +12,9 @@ const Index = ({postList}) => {
 						return (
 							<li key={post.title} className="flex">
 								<span className="block pr-10 text-gray-600 p-2 font-light">{post.date}</span>
-                                <Link href="/">
-                                  <a className="text-blue-800 hover:bg-gray-100 p-2 font-medium">{post.title}</a>
-                                </Link>
+								<Link href="/">
+									<a className="text-blue-800 hover:bg-gray-100 p-2 font-medium">{post.title}</a>
+								</Link>
 							</li>
 						);
 					})}
