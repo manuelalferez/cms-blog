@@ -23,3 +23,5 @@ Second, we create another folder for the pages of our blog.
 5. `mkdir pages` 
 6. `touch index.js`
 
+Third, we install tailwind following the instruction of the [official website](https://tailwindcss.com/docs/installation). 
+
