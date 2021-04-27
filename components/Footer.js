@@ -13,8 +13,12 @@ const Footer = () => {
 			url: 'https://github.com/manuelalferez',
 		},
 		{
+			name: 'Medium',
+			url: 'https://medium.com/me/stories/public',
+		},
+		{
 			name: 'Instagram',
-			url: ' https://www.instagram.com/manuelalferez_',
+			url: 'https://www.instagram.com/manuelalferez_',
 		},
 		{
 			name: 'LinkedIn',
@@ -31,7 +35,7 @@ const Footer = () => {
 	];
 
 	return (
-		<div className="flex justify-center flex-wrap border-t-2 p-2 w-screen text-center text-gray-500 font-light">
+		<div className="flex justify-center flex-wrap border-t-2 p-2 w-screen text-center text-gray-500 font-light mt-7">
 			{socialList.map((item) => (
 				<a href={item.url} className="mr-2 p-1 hover:text-black">
 					{item.name}
