@@ -5,33 +5,25 @@ const Footer = () => {
 			url: 'https://twitter.com/manuelalferez',
 		},
 		{
-			name: 'Telegram',
-			url: 'https://t.me/manuelalferez',
-		},
-		{
 			name: 'GitHub',
 			url: 'https://github.com/manuelalferez',
+		},
+		{
+			name: 'Telegram',
+			url: 'https://t.me/manuelalferez',
 		},
 		{
 			name: 'Medium',
 			url: 'https://medium.com/me/stories/public',
 		},
 		{
-			name: 'Instagram',
-			url: 'https://www.instagram.com/manuelalferez_',
-		},
-		{
 			name: 'LinkedIn',
 			url: 'https://www.linkedin.com/in/manuelalferez/',
 		},
 		{
-			name: 'Lumberando',
-			url: ' https://lumberando.web.app/',
-		},
-		{
-			name: "Manuel's Channel",
-			url: 'https://t.me/joinchat/F1LBnl7D8sc5MDU8',
-		},
+			name: 'Instagram',
+			url: 'https://www.instagram.com/manuelalferez_',
+		}
 	];
 
 	return (
