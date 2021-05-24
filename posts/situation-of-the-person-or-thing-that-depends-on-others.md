@@ -15,11 +15,11 @@ Before looking abroad, handle the situation by yourself. It is worth noting the 
 
 
 
- • More control and responsibility for your decisions. 
+ - More control and responsibility for your decisions. 
 
- • Fend for yourself. 
+ - Fend for yourself. 
 
- • Change our perception of loneliness. This is not bad. It is the best way to know yourself, respect yourself and have a good self-esteem. 
+ - Change our perception of loneliness. This is not bad. It is the best way to know yourself, respect yourself and have a good self-esteem. 
 
 
 

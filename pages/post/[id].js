@@ -22,8 +22,7 @@ const Post = ({ content, title, date }) => {
 						code: ({ node, ...props }) => <code className="font-mono bg-black p-2 text-white rounded-md" {...props} />,
 						iframe: ({ node, ...props }) => <iframe className="w-4/5" {...props} />,
 						b: ({ node, ...props }) => <b className="font-bold" {...props} />,
-						ul: ({ node, ...props }) => <ul className="list-inside list-disc " {...props} />,
-						li: ({ node, ...props }) => <li className="pl-2" {...props} />,
+						ul: ({ node, ...props }) => <ul className="pl-4 list-disc" {...props} />,
 						p: ({ node, ...props }) => <p {...props} />,
 						img: ({ node, ...props }) => (
 							<div className="flex justify-center">
