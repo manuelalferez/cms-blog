@@ -2,24 +2,15 @@ import Layout from "../components/Layout.js";
 import Link from "next/link";
 import fs from "fs";
 import matter from "gray-matter";
+import { client } from "../config/prismic-configuration";
+import Prismic from "prismic-javascript";
 
-const Index = ({ postList }) => {
+const Index = ({ postList, about }) => {
   return (
     <div>
       <Layout>
         <div className="flex justify-center pt-2">
-          <div className="max-w-xl p-2">
-            I'm Manuel and I'm doing stuff with JavaScript, sharing code on
-            GitHub and participating as a member of{" "}
-            <a
-              href="https://www.meetup.com/es-ES/GDG-Jaen"
-              className="text-blue-800 hover:underline"
-              target="_blank"
-            >
-              Google Developer Groups
-            </a>
-            . Ask me about Open Source, hiking or just for a chat.
-          </div>
+          <div className="max-w-xl p-2">{about}</div>
         </div>
         <ul className="space-y-4 grid grid-cols-8 gap-4 pt-9">
           {postList.map((post) => {
@@ -55,6 +46,8 @@ const Index = ({ postList }) => {
 export const getStaticProps = async () => {
   const path = process.cwd() + "/posts/";
   const fileNames = fs.readdirSync(path);
+  const about = await client.getSingle("about");
+  console.log(about.data.description[0].text);
 
   const postList = fileNames.map((fileName) => {
     const filePath = path + fileName;
@@ -74,6 +67,7 @@ export const getStaticProps = async () => {
         const bDate = new Date(b.date);
         return aDate < bDate ? 1 : -1;
       }),
+      about: about.data.description[0].text,
     },
   };
 };
