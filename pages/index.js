@@ -9,18 +9,15 @@ const Index = ({ postList, about }) => {
     <div>
       <Layout>
         <div className="flex justify-center pt-2">
-          <div className="about max-w-xl p-2">
+          <div className="about max-w-xl p-4 mb-10">
             <RichText render={about} />
           </div>
         </div>
-        <ul className="space-y-4 grid grid-cols-8 gap-4 pt-9">
+        <ul className="">
           {postList.map((post) => {
             return (
-              <li
-                key={post.id}
-                className="flex 2xl:col-start-4 md:col-start-3 sm:col-start-2 col-span-4 "
-              >
-                <span className="pr-10 text-gray-600 py-2 font-light sm:w-2/4 xl:w-1/4">
+              <li key={post.id} className="flex flex-col px-4 pb-4 ">
+                <span className="pr-10 text-gray-600 font-light">
                   {post.date}
                 </span>
                 <Link
@@ -31,7 +28,7 @@ const Index = ({ postList, about }) => {
                     },
                   }}
                 >
-                  <a className="text-blue-800 hover:bg-gray-100 p-2 font-medium">
+                  <a className="text-blue-800 overflow-x-hidden max-w-max hover:bg-gray-100 font-medium">
                     <RichText render={post.title} />
                   </a>
                 </Link>

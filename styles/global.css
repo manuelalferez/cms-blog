@@ -2,6 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply overflow-x-hidden;
+}
+
 .about a {
   @apply text-blue-800 font-medium hover:border-b-2 hover:border-gray-200;
+}
+
+.post {
+  @apply space-y-2 px-8 md:px-24 md:pl-24 lg:pl-52 xl:w-10/12 xl:pl-64 py-10;
+}
+
+.post a {
+  @apply text-blue-800 font-medium hover:border-b-2 hover:border-gray-200;
+}
+
+.post img {
+  @apply lg:w-8/12 lg:mx-auto;
+}
+
+.post ul {
+  @apply list-disc lg:text-xl pl-4;
+}
+
+.post h1 {
+  @apply text-xl md:text-xl lg:text-4xl font-bold;
+}
+
+.post h2 {
+  @apply text-lg lg:text-3xl uppercase pt-10;
+}
+
+.post h3 {
+  @apply text-base lg:text-2xl font-bold uppercase pt-8;
+}
+
+.post span {
+  @apply text-sm text-gray-600;
+}
+
+.post p {
+  @apply my-4 lg:text-xl;
+}
+
+.post iframe {
+  @apply max-w-screen-sm mx-auto;
 }

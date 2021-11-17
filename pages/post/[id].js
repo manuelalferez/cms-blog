@@ -6,12 +6,12 @@ import Prismic from "prismic-javascript";
 const Post = ({ content, title, date }) => {
   return (
     <Layout>
-      <div className="space-y-2 text-justify max-w-xl mx-auto p-2 py-10">
-        <h1 className="text-2xl px-2">
-          <RichText render={title} />
-        </h1>
-        <span className="text-sm text-gray-600 px-2">{date}</span>
-        <RichText render={content} />
+      <div className="post">
+        <RichText render={title} />
+        <span>{date}</span>
+        <div className="content">
+          <RichText render={content} />
+        </div>
       </div>
     </Layout>
   );
