@@ -1,66 +1,30 @@
-import { GetStaticPaths } from "next";
-import fs from "fs";
-import matter from "gray-matter";
 import Layout from "../../components/Layout";
-import ReactMarkdown from "react-markdown";
-import rehypeRaw from "rehype-raw";
+import { client } from "../../config/prismic-configuration";
+import { RichText } from "prismic-reactjs";
+import Prismic from "prismic-javascript";
 
 const Post = ({ content, title, date }) => {
   return (
     <Layout>
       <div className="space-y-2 text-justify max-w-xl mx-auto p-2 py-10">
-        <h1 className="text-2xl px-2">{title}</h1>
+        <h1 className="text-2xl px-2">
+          <RichText render={title} />
+        </h1>
         <span className="text-sm text-gray-600 px-2">{date}</span>
-        <ReactMarkdown
-          className="space-y-7 p-2"
-          rehypePlugins={[rehypeRaw]}
-          components={{
-            a: ({ node, ...props }) => (
-              <a className="text-blue-800 hover:underline" {...props} />
-            ),
-            h1: ({ node, ...props }) => <h1 className="text-2xl" {...props} />,
-            h2: ({ node, ...props }) => (
-              <h2 className="text-xl font-semibold" {...props} />
-            ),
-            h3: ({ node, ...props }) => (
-              <h2 className="text-lg font-semibold" {...props} />
-            ),
-            code: ({ node, ...props }) => (
-              <code
-                className="font-mono bg-black p-2 text-white rounded-md"
-                {...props}
-              />
-            ),
-            iframe: ({ node, ...props }) => (
-              <iframe className="w-4/5" {...props} />
-            ),
-            b: ({ node, ...props }) => <b className="font-bold" {...props} />,
-            ul: ({ node, ...props }) => (
-              <ul className="pl-4 list-disc" {...props} />
-            ),
-            p: ({ node, ...props }) => <p {...props} />,
-            img: ({ node, ...props }) => (
-              <div className="flex justify-center">
-                <img {...props} />
-              </div>
-            ),
-          }}
-        >
-          {content}
-        </ReactMarkdown>
+        <RichText render={content} />
       </div>
     </Layout>
   );
 };
 
 export const getStaticPaths = async () => {
-  const path = process.cwd() + "/posts/";
-  const fileNames = fs.readdirSync(path);
-
-  const pathNames = fileNames.map((fileName) => {
+  const posts = await client.query(
+    Prismic.Predicates.at("document.type", "post")
+  );
+  const pathNames = posts.results.map((post) => {
     return {
       params: {
-        id: fileName.replace(".md", "").trim(),
+        id: post.slugs[0],
       },
     };
   });
@@ -72,17 +36,18 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async (context) => {
-  const path = process.cwd() + "/posts/";
-  const filePath = path + context.params?.id + ".md";
+  const posts = await client.query(
+    Prismic.Predicates.at("document.type", "post")
+  );
 
-  const fileContent = fs.readFileSync(filePath, "utf-8");
-  const result = matter(fileContent);
-
+  const currentPost = posts.results.filter(
+    (post) => post.slugs[0] == context.params?.id
+  )[0];
   return {
     props: {
-      content: result.content,
-      title: result.data.title,
-      date: result.data.date,
+      content: currentPost.data.content,
+      title: currentPost.data.title,
+      date: currentPost.data.date,
     },
   };
 };

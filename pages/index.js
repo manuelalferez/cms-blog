@@ -1,8 +1,7 @@
 import Layout from "../components/Layout.js";
 import Link from "next/link";
-import fs from "fs";
-import matter from "gray-matter";
 import { client } from "../config/prismic-configuration";
+import { RichText } from "prismic-reactjs";
 import Prismic from "prismic-javascript";
 
 const Index = ({ postList, about }) => {
@@ -10,13 +9,15 @@ const Index = ({ postList, about }) => {
     <div>
       <Layout>
         <div className="flex justify-center pt-2">
-          <div className="max-w-xl p-2">{about}</div>
+          <div className="about max-w-xl p-2">
+            <RichText render={about} />
+          </div>
         </div>
         <ul className="space-y-4 grid grid-cols-8 gap-4 pt-9">
           {postList.map((post) => {
             return (
               <li
-                key={post.title}
+                key={post.id}
                 className="flex 2xl:col-start-4 md:col-start-3 sm:col-start-2 col-span-4 "
               >
                 <span className="pr-10 text-gray-600 py-2 font-light sm:w-2/4 xl:w-1/4">
@@ -31,7 +32,7 @@ const Index = ({ postList, about }) => {
                   }}
                 >
                   <a className="text-blue-800 hover:bg-gray-100 p-2 font-medium">
-                    {post.title}
+                    <RichText render={post.title} />
                   </a>
                 </Link>
               </li>
@@ -44,19 +45,15 @@ const Index = ({ postList, about }) => {
 };
 
 export const getStaticProps = async () => {
-  const path = process.cwd() + "/posts/";
-  const fileNames = fs.readdirSync(path);
   const about = await client.getSingle("about");
-  console.log(about.data.description[0].text);
-
-  const postList = fileNames.map((fileName) => {
-    const filePath = path + fileName;
-    const fileContent = fs.readFileSync(filePath, "utf-8");
-    const result = matter(fileContent);
+  const posts = await client.query(
+    Prismic.Predicates.at("document.type", "post")
+  );
+  const postList = posts.results.map((post) => {
     return {
-      id: fileName.replace(".md", "").trim(),
-      title: result.data.title,
-      date: result.data.date,
+      id: post.slugs[0],
+      title: post.data.title,
+      date: post.data.date,
     };
   });
 
@@ -67,7 +64,7 @@ export const getStaticProps = async () => {
         const bDate = new Date(b.date);
         return aDate < bDate ? 1 : -1;
       }),
-      about: about.data.description[0].text,
+      about: about.data.description,
     },
   };
 };

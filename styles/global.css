@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.about a {
+  @apply text-blue-800 font-medium hover:border-b-2 hover:border-gray-200;
+}
