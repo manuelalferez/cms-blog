@@ -13,29 +13,34 @@ const Index = ({ postList, about }) => {
             <RichText render={about} />
           </div>
         </div>
-        <ul className="">
-          {postList.map((post) => {
-            return (
-              <li key={post.id} className="flex flex-col px-4 pb-4 ">
-                <span className="pr-10 text-gray-600 font-light">
-                  {post.date}
-                </span>
-                <Link
-                  href={{
-                    pathname: "post/[id]",
-                    query: {
-                      id: post.id,
-                    },
-                  }}
+        <div className="flex justify-center">
+          <ul className="max-w-xl">
+            {postList.map((post) => {
+              return (
+                <li
+                  key={post.id}
+                  className="flex flex-col md:flex-row px-4 pb-4 "
                 >
-                  <a className="text-blue-800 overflow-x-hidden max-w-max hover:bg-gray-100 font-medium">
-                    <RichText render={post.title} />
-                  </a>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+                  <span className="pr-10 md:pr-0 md:w-32 text-gray-600 font-light">
+                    {post.date}
+                  </span>
+                  <Link
+                    href={{
+                      pathname: "post/[id]",
+                      query: {
+                        id: post.id,
+                      },
+                    }}
+                  >
+                    <a className="text-blue-800 overflow-x-hidden max-w-max hover:bg-gray-100 font-medium">
+                      <RichText render={post.title} />
+                    </a>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </Layout>
     </div>
   );

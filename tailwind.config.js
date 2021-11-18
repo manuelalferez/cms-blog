@@ -6,10 +6,10 @@ module.exports = {
     extend: {},
     screens: {
       sm: "320px",
-      md: "375px",
-      lg: "425px",
-      xl: "768px",
-      "2xl": "1024px",
+      md: "768px",
+      lg: "1024px",
+      xl: "	1280px",
+      "2xl": "1536px",
     },
   },
   variants: {

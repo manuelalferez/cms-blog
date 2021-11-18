@@ -6,11 +6,13 @@ import Prismic from "prismic-javascript";
 const Post = ({ content, title, date }) => {
   return (
     <Layout>
-      <div className="post">
-        <RichText render={title} />
-        <span>{date}</span>
-        <div className="content">
-          <RichText render={content} />
+      <div className="w-screen flex-none md:flex md:justify-center">
+        <div className="post">
+          <RichText render={title} />
+          <span>{date}</span>
+          <div className="content">
+            <RichText render={content} />
+          </div>
         </div>
       </div>
     </Layout>

@@ -11,7 +11,7 @@ html {
 }
 
 .post {
-  @apply space-y-2 px-8 md:px-24 md:pl-24 lg:pl-52 xl:w-10/12 xl:pl-64 py-10;
+  @apply space-y-2 px-8 w-screen py-10 md:px-0 md:w-8/12 lg:w-8/12 xl:w-6/12 2xl:w-5/12;
 }
 
 .post a {
@@ -44,6 +44,10 @@ html {
 
 .post p {
   @apply my-4 lg:text-xl;
+}
+
+.post pre {
+  @apply p-2 bg-gray-800 text-white rounded-md;
 }
 
 .post iframe {
