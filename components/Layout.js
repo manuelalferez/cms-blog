@@ -11,7 +11,7 @@ const Layout = (props) => {
         <link
           rel="icon"
           type="image/x-icon"
-          href="https://www.flaticon.com/svg/vstatic/svg/3600/3600932.svg?token=exp=1620320712~hmac=575ddf8353f25f7b8aad5f92df23fe3d"
+          href="https://ik.imagekit.io/manuelalferez/blog/favicon_V2z4CMYwwd.png"
         />
       </Head>
       <Header />
