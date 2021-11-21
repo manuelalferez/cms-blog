@@ -3,7 +3,12 @@ module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        fira: ["Fira"],
+        sans: ["Fira", "sans-serif"],
+      },
+    },
     screens: {
       sm: "320px",
       md: "768px",
@@ -16,7 +21,11 @@ module.exports = {
     extend: {
       borderStyle: ["responsive", "hover"],
       borderWidth: ["responsive", "hover"],
+      fontFamily: ["hover", "focus"],
     },
   },
   plugins: [],
+  corePlugins: {
+    fontFamily: true,
+  },
 };
