@@ -13,6 +13,10 @@ const Layout = (props) => {
           type="image/x-icon"
           href="https://ik.imagekit.io/manuelalferez/blog/favicon_V2z4CMYwwd.png"
         />
+        <meta
+          property="og:image"
+          content="https://ik.imagekit.io/manuelalferez/blog/metaPreview_AAAZ0BCBJ.png?updatedAt=1637523218210"
+        />
       </Head>
       <Header />
       <div className="mb-auto">{props.children}</div>
