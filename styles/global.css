@@ -2,8 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Fira";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("/fonts/FiraSans-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Fira";
+  font-style: bold;
+  font-weight: 600;
+  src: local(""), url("/fonts/FiraSans-Bold.ttf") format("ttf");
+}
+
+@tailwind utilities;
+
 html {
-  @apply overflow-x-hidden;
+  @apply overflow-x-hidden font-fira;
 }
 
 .about a {
