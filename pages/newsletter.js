@@ -4,16 +4,13 @@ import { client } from "../config/prismic-configuration";
 import { RichText } from "prismic-reactjs";
 import Prismic from "prismic-javascript";
 
-const Index = ({ postList, about }) => {
+const Newsletter = ({ postList, newsletterAbout }) => {
   return (
     <div>
       <Layout>
         <div className="flex justify-center pt-2">
           <div className="about max-w-xl p-4 mb-10">
-            <RichText render={about} />
-            <Link href="/newsletter">
-              <a>Check out my newsletter</a>
-            </Link>
+            <RichText render={newsletterAbout} />
           </div>
         </div>
         <div className="flex justify-center">
@@ -29,7 +26,7 @@ const Index = ({ postList, about }) => {
                   </span>
                   <Link
                     href={{
-                      pathname: "post/[id]",
+                      pathname: "newsletter/[id]",
                       query: {
                         id: post.id,
                       },
@@ -50,9 +47,9 @@ const Index = ({ postList, about }) => {
 };
 
 export const getStaticProps = async () => {
-  const about = await client.getSingle("about");
+  const newsletterAbout = await client.getSingle("newsletter-about");
   const posts = await client.query(
-    Prismic.Predicates.at("document.type", "post")
+    Prismic.Predicates.at("document.type", "newsletter")
   );
   const postList = posts.results.map((post) => {
     return {
@@ -69,9 +66,9 @@ export const getStaticProps = async () => {
         const bDate = new Date(b.date);
         return aDate < bDate ? 1 : -1;
       }),
-      about: about.data.description,
+      newsletterAbout: newsletterAbout.data.description,
     },
   };
 };
 
-export default Index;
+export default Newsletter;

@@ -4,7 +4,7 @@ import { RichText } from "prismic-reactjs";
 import Prismic from "prismic-javascript";
 import Link from "next/link";
 
-const Post = ({ content, title, date }) => {
+const Newsletter = ({ content, title, date }) => {
   return (
     <Layout>
       <div className="w-screen flex-none md:flex md:justify-center">
@@ -14,7 +14,7 @@ const Post = ({ content, title, date }) => {
           <div className="content">
             <RichText render={content} />
           </div>
-          <Link href="/">
+          <Link href="/newsletter">
             <a className="back-button">
               <img src="https://ik.imagekit.io/manuelalferez/blog/back_Q03GWjg1x.svg" />
             </a>
@@ -27,7 +27,7 @@ const Post = ({ content, title, date }) => {
 
 export const getStaticPaths = async () => {
   const posts = await client.query(
-    Prismic.Predicates.at("document.type", "post")
+    Prismic.Predicates.at("document.type", "newsletter")
   );
   const pathNames = posts.results.map((post) => {
     return {
@@ -45,7 +45,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const posts = await client.query(
-    Prismic.Predicates.at("document.type", "post")
+    Prismic.Predicates.at("document.type", "newsletter")
   );
 
   const currentPost = posts.results.filter(
@@ -60,4 +60,4 @@ export const getStaticProps = async (context) => {
   };
 };
 
-export default Post;
+export default Newsletter;

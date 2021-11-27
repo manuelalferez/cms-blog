@@ -22,6 +22,7 @@ module.exports = {
       borderStyle: ["responsive", "hover"],
       borderWidth: ["responsive", "hover"],
       fontFamily: ["hover", "focus"],
+      boxShadow: ["active"],
     },
   },
   plugins: [],

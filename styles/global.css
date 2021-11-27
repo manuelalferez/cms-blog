@@ -69,3 +69,11 @@ html {
 .post iframe {
   @apply max-w-screen-sm mx-auto;
 }
+
+.post .back-button {
+  @apply bg-gray-200 w-12 h-12 mt-24 rounded-full shadow-lg active:shadow-none hover:bg-gray-100 flex mx-auto p-2;
+}
+
+.post .back-button img {
+  @apply w-full h-full;
+}
