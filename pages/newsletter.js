@@ -41,6 +41,11 @@ const Newsletter = ({ postList, newsletterAbout }) => {
             })}
           </ul>
         </div>
+        <Link href="/">
+          <a className="back-button">
+            <img src="https://ik.imagekit.io/manuelalferez/blog/back_Q03GWjg1x.svg" />
+          </a>
+        </Link>
       </Layout>
     </div>
   );
