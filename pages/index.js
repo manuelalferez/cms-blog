@@ -3,18 +3,14 @@ import Link from "next/link";
 import { client } from "../config/prismic-configuration";
 import { RichText } from "prismic-reactjs";
 import Prismic from "prismic-javascript";
+import About from "../components/About.js";
 
 const Index = ({ postList, about }) => {
   return (
     <div>
       <Layout>
         <div className="flex justify-center pt-2">
-          <div className="about max-w-xl p-4 mb-10">
-            <RichText render={about} />
-            <Link href="/newsletter">
-              <a>Check out my newsletter</a>
-            </Link>
-          </div>
+          <About about={about} />
         </div>
         <div className="flex justify-center">
           <ul className="max-w-xl">

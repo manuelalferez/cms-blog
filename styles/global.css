@@ -7,11 +7,13 @@
 @tailwind utilities;
 
 html {
-  @apply overflow-x-hidden font-mono;
+  @apply overflow-x-hidden bg-mywhite;
 }
-
+.about p {
+  @apply font-serif text-base md:text-lg;
+}
 .about a {
-  @apply font-medium hover:border-b-2;
+  @apply text-myblue hover:border-b-2 hover:border-myblue;
 }
 
 .post {
