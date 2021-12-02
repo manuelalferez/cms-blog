@@ -32,7 +32,7 @@ const Newsletter = ({ postList, newsletterAbout }) => {
                       },
                     }}
                   >
-                    <a className="text-blue-800 overflow-x-hidden max-w-max hover:bg-gray-100 font-medium">
+                    <a className="overflow-x-hidden max-w-max hover:bg-gray-100 font-medium">
                       <RichText render={post.title} />
                     </a>
                   </Link>

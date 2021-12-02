@@ -2,28 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Fira";
-  font-style: normal;
-  font-weight: 400;
-  src: local(""), url("/fonts/FiraSans-Regular.ttf") format("ttf");
-}
-
-@font-face {
-  font-family: "Fira";
-  font-style: bold;
-  font-weight: 600;
-  src: local(""), url("/fonts/FiraSans-Bold.ttf") format("ttf");
-}
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Fira+Code&family=Libre+Baskerville:wght@400;700&family=Sanchez&display=swap");
 
 @tailwind utilities;
 
 html {
-  @apply overflow-x-hidden font-fira;
+  @apply overflow-x-hidden font-mono;
 }
 
 .about a {
-  @apply text-blue-800 font-medium hover:border-b-2 hover:border-gray-200;
+  @apply font-medium hover:border-b-2;
 }
 
 .post {
@@ -31,7 +19,7 @@ html {
 }
 
 .post a {
-  @apply text-blue-800 font-medium hover:border-b-2 hover:border-gray-200;
+  @apply font-medium hover:border-b-2;
 }
 
 .post img {
