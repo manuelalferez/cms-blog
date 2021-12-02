@@ -10,10 +10,14 @@ html {
   @apply overflow-x-hidden bg-mywhite;
 }
 .about p {
-  @apply font-serif text-base md:text-lg;
+  @apply font-serif text-base md:text-lg text-justify;
 }
 .about a {
   @apply text-myblue hover:border-b-2 hover:border-myblue;
+}
+
+.portfolio a {
+  @apply px-4 py-2 bg-mylightpink bg-opacity-25 text-mypink m-1 mt-8;
 }
 
 .post {

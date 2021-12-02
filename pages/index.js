@@ -4,14 +4,14 @@ import { client } from "../config/prismic-configuration";
 import { RichText } from "prismic-reactjs";
 import Prismic from "prismic-javascript";
 import About from "../components/About.js";
+import Portfolio from "../components/Portfolio.js";
 
-const Index = ({ postList, about }) => {
+const Index = ({ postList, about, projects }) => {
   return (
     <div>
       <Layout>
-        <div className="flex justify-center pt-2">
-          <About about={about} />
-        </div>
+        <About about={about} />
+        <Portfolio projects={projects} />
         <div className="flex justify-center">
           <ul className="max-w-xl">
             {postList.map((post) => {
@@ -50,6 +50,10 @@ export const getStaticProps = async () => {
   const posts = await client.query(
     Prismic.Predicates.at("document.type", "post")
   );
+  const projects = await client.query(
+    Prismic.Predicates.at("document.type", "portfolio")
+  );
+
   const postList = posts.results.map((post) => {
     return {
       id: post.slugs[0],
@@ -66,6 +70,7 @@ export const getStaticProps = async () => {
         return aDate < bDate ? 1 : -1;
       }),
       about: about.data.description,
+      projects: projects.results,
     },
   };
 };
