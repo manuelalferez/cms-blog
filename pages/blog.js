@@ -8,7 +8,7 @@ const Blog = ({ postList }) => {
     <div className="blog">
       <Layout>
         <h1 className="title">Blog</h1>
-        <Posts posts={postList} />
+        <Posts posts={postList} path={"post"} />
       </Layout>
     </div>
   );

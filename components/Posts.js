@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { RichText } from "prismic-reactjs";
 
-const Posts = ({ posts }) => {
+const Posts = ({ posts, path }) => {
   return (
     <div className="posts flex justify-center p-8 font-serif text-base md:text-lg">
       <ul className="max-w-xl">
@@ -13,7 +13,7 @@ const Posts = ({ posts }) => {
               </span>
               <Link
                 href={{
-                  pathname: "post/[id]",
+                  pathname: `${path}/[id]`,
                   query: {
                     id: post.id,
                   },
