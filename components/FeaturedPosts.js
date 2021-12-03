@@ -24,7 +24,9 @@ const FeaturedPosts = ({ featuredPosts }) => {
         className="w-screen"
       />
       <div className="p-8 ">
-        <h1 className="">Featured Posts</h1>
+        <span className="lg:flex lg:justify-center">
+          <h1 className="">Featured Posts</h1>
+        </span>
         <div className="md:flex md:justify-evenly md:flex-wrap mb-24">
           {posts}
         </div>
