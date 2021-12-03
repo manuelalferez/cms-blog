@@ -35,9 +35,11 @@ const Portfolio = ({ projects }) => {
 
   return (
     <div className="portfolio p-8 pt-4">
-      <h1 className="font-display text-xl md:text-xl lg:text-2xl mb-4">
-        Portfolio
-      </h1>
+      <span className="lg:flex lg:justify-center">
+        <h1 className="font-display text-xl md:text-xl lg:text-2xl mb-4">
+          Portfolio
+        </h1>
+      </span>
       <div className="md:flex md:justify-evenly font-serif">{projectList}</div>
     </div>
   );

@@ -3,7 +3,7 @@ import { RichText } from "prismic-reactjs";
 
 const Posts = ({ posts, path }) => {
   return (
-    <div className="posts flex justify-center p-8 font-serif text-base md:text-lg">
+    <div className="posts flex justify-center p-8 font-serif text-base md:text-lg md:mb-24">
       <ul className="max-w-xl">
         {posts.map((post) => {
           return (
@@ -19,7 +19,7 @@ const Posts = ({ posts, path }) => {
                   },
                 }}
               >
-                <a className="overflow-x-hidden w-max break-all md:max-w-screen-sm">
+                <a className="overflow-x-hidden md:max-w-screen-sm">
                   <RichText render={post.title} />
                 </a>
               </Link>
