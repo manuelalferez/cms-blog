@@ -48,17 +48,27 @@ module.exports = {
       inner: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
       none: "none",
     },
+    backgroundImage: {
+      "code-buttons":
+        "url('https://ik.imagekit.io/manuelalferez/blog/bg/code_menu_SsmUuleJU.svg')",
+    },
   },
   variants: {
     extend: {
       borderStyle: ["responsive", "hover"],
       borderWidth: ["responsive", "hover"],
+      borderRadius: ["hover", "focus"],
       fontFamily: ["hover", "focus"],
       boxShadow: ["active"],
+      backgroundColor: ["active", "hover", "focus"],
+      padding: ["hover", "focus"],
     },
   },
   plugins: [],
   corePlugins: {
     fontFamily: true,
+    backgroundImage: true,
+    backgroundColor: true,
+    padding: true,
   },
 };

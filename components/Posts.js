@@ -19,7 +19,7 @@ const Posts = ({ posts, path }) => {
                   },
                 }}
               >
-                <a className="overflow-x-hidden md:max-w-screen-sm">
+                <a className="overflow-x-hidden w-max break-all md:max-w-screen-sm">
                   <RichText render={post.title} />
                 </a>
               </Link>

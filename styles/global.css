@@ -15,7 +15,8 @@ html {
 }
 .about a,
 .featured-posts a,
-.posts a {
+.posts a,
+.post a {
   @apply text-myblue no-underline hover:shadow-link;
 }
 
@@ -39,11 +40,10 @@ html {
 }
 
 .post {
-  @apply space-y-2 px-8 w-screen py-10 md:px-0 md:w-8/12 lg:w-8/12 xl:w-6/12 2xl:w-5/12;
+  @apply p-8 md:max-w-screen-md	 font-body md:text-lg;
 }
-
-.post a {
-  @apply font-medium hover:border-b-2;
+.post .date {
+  @apply text-mylightpink font-serif;
 }
 
 .post img {
@@ -51,23 +51,29 @@ html {
 }
 
 .post ul {
-  @apply list-disc lg:text-xl pl-4;
+  @apply pt-4 list-disc lg:text-xl pl-4;
 }
 
-.post h1 {
-  @apply text-xl md:text-xl lg:text-4xl font-bold;
+.post .title {
+  @apply font-display text-xl md:text-3xl lg:text-4xl mb-4 text-center;
+}
+
+.post .title,
+.post h2,
+.post h3 {
+  @apply text-mypink font-display;
 }
 
 .post h2 {
-  @apply text-lg lg:text-3xl uppercase pt-10;
+  @apply text-lg md:text-xl lg:text-2xl lg:text-3xl pt-10;
 }
 
 .post h3 {
-  @apply text-base lg:text-2xl font-bold uppercase pt-8;
+  @apply text-base md:text-lg lg:text-xl pt-8;
 }
 
 .post span {
-  @apply text-sm text-gray-600;
+  @apply text-sm;
 }
 
 .post p {
@@ -75,7 +81,7 @@ html {
 }
 
 .post pre {
-  @apply p-4 bg-gray-800 text-white rounded-md overflow-x-auto;
+  @apply font-mono p-4 bg-myblack text-white rounded-md overflow-x-auto bg-code-buttons bg-no-repeat;
 }
 
 .post iframe {
@@ -83,7 +89,7 @@ html {
 }
 
 .back-button {
-  @apply bg-gray-200 w-12 h-12 mt-24 rounded-full shadow-lg active:shadow-none hover:bg-gray-100 flex mx-auto p-2;
+  @apply w-12 h-12 mt-16 flex mx-auto hover:border-none rounded-full bg-myblue hover:p-1;
 }
 
 .back-button img {
