@@ -26,7 +26,7 @@ html {
 
 .portfolio h1,
 .featured-posts h1 {
-  @apply text-mypink font-display text-xl lg:text-2xl mb-8;
+  @apply text-mypink font-display text-xl lg:text-2xl mb-8 md:pl-10;
 }
 
 .portfolio h2,

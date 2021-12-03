@@ -25,7 +25,7 @@ const FeaturedPosts = ({ featuredPosts }) => {
       />
       <div className="p-8 ">
         <h1 className="">Featured Posts</h1>
-        <div className="md:flex md:justify-evenly md:flex-wrap mb-10">
+        <div className="md:flex md:justify-evenly md:flex-wrap mb-24">
           {posts}
         </div>
       </div>
