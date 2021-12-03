@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { RichText } from "prismic-reactjs";
 
-const Post = ({ content, title, date }) => {
+const Post = ({ content, title, date, backPath }) => {
   return (
     <div className="w-screen flex-none md:flex pb-24 md:justify-center">
       <div className="post">
@@ -14,7 +14,7 @@ const Post = ({ content, title, date }) => {
         <div className="content">
           <RichText render={content} />
         </div>
-        <Link href="/newsletter">
+        <Link href={backPath}>
           <a className="back-button">
             <img src="https://ik.imagekit.io/manuelalferez/blog/backbutton_FD5MxYnnmQY.svg?updatedAt=1638528249452" />
           </a>

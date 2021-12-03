@@ -6,7 +6,12 @@ import PostRender from "../../components/PostRender";
 const Post = ({ content, title, date }) => {
   return (
     <Layout>
-      <PostRender content={content} title={title} date={date} />
+      <PostRender
+        content={content}
+        title={title}
+        date={date}
+        backPath="/blog"
+      />
     </Layout>
   );
 };
