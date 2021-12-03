@@ -18,7 +18,7 @@ const Header = () => {
       {list}
       <img
         src={data.bgURL}
-        class="absolute top-0 w-screen z-0 h-16 md:h-20 transform rotate-180	"
+        class="absolute top-0 w-screen z-0 h-16 md:h-20 transform rotate-180"
       />
     </div>
   );

@@ -12,12 +12,23 @@ html {
 .about p {
   @apply font-serif text-base md:text-lg text-justify;
 }
-.about a {
+.about a,
+.featured-posts a {
   @apply text-myblue hover:border-b-2 hover:border-myblue;
 }
 
 .portfolio a {
-  @apply px-4 py-2 bg-mylightpink bg-opacity-25 text-mypink m-1 mt-8;
+  @apply px-4 py-2 bg-mylightpink bg-opacity-25 text-mypink m-1 mt-8 hover:bg-myblue hover:text-mywhite rounded-sm;
+}
+
+.portfolio h1,
+.featured-posts h1 {
+  @apply text-mypink font-display text-xl lg:text-2xl mb-8;
+}
+
+.portfolio h2,
+.featured-posts h2 {
+  @apply text-lg font-bold mb-4 text-myorange lg:text-xl;
 }
 
 .post {

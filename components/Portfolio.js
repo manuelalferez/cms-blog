@@ -2,11 +2,9 @@ import Link from "next/link";
 
 const Portfolio = ({ projects }) => {
   let projectList = [];
-  console.log(projects);
 
   projects.map((element) => {
     let technologies = [];
-    console.log(element);
     element.data.technologies.map((technology) => {
       technologies.push(
         <li className="p-1 bg-myblack text-white rounded-lg m-1 font-mono text-sm">
@@ -19,8 +17,8 @@ const Portfolio = ({ projects }) => {
       <div className="border-4 border-mypink rounded mb-8 md:w-5/12 xl:w-4/12">
         <img src={element.data.image.url} class="w-full h-40 object-cover" />
         <div className="p-2 px-4">
-          <h1 className="font-display text-lg">{element.data.title[0].text}</h1>
-          <p className="font-serif">{element.data.description[0].text}</p>
+          <h2>{element.data.title[0].text}</h2>
+          <p>{element.data.description[0].text}</p>
           <ul className="flex flex-wrap mt-4">{technologies}</ul>
           <div className="flex justify-center">
             <Link href={element.data.website[0].text}>
@@ -40,7 +38,7 @@ const Portfolio = ({ projects }) => {
       <h1 className="font-display text-xl md:text-xl lg:text-2xl mb-4">
         Portfolio
       </h1>
-      <div className="md:flex md:justify-evenly">{projectList}</div>
+      <div className="md:flex md:justify-evenly font-serif">{projectList}</div>
     </div>
   );
 };
