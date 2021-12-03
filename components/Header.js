@@ -6,7 +6,7 @@ const Header = () => {
   data.links.forEach((item) =>
     list.push(
       <Link href={item.url}>
-        <a className="z-10 p-2 md:mr-10 text-mywhite hover:bg-mylightpink">
+        <a className="z-10 p-2 md:mr-10 text-mywhite hover:bg-mylightpink hover:text-myblack rounded-xl rounded-tl-3xl rounded-tr-none">
           {item.text}
         </a>
       </Link>
