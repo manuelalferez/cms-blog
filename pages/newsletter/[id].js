@@ -1,26 +1,12 @@
 import Layout from "../../components/Layout";
 import { client } from "../../config/prismic-configuration";
-import { RichText } from "prismic-reactjs";
 import Prismic from "prismic-javascript";
-import Link from "next/link";
+import PostRender from "../../components/PostRender";
 
 const Newsletter = ({ content, title, date }) => {
   return (
     <Layout>
-      <div className="w-screen flex-none md:flex md:justify-center">
-        <div className="post">
-          <RichText render={title} />
-          <span>{date}</span>
-          <div className="content">
-            <RichText render={content} />
-          </div>
-          <Link href="/newsletter">
-            <a className="back-button">
-              <img src="https://ik.imagekit.io/manuelalferez/blog/back_Q03GWjg1x.svg" />
-            </a>
-          </Link>
-        </div>
-      </div>
+      <PostRender content={content} title={title} date={date} />
     </Layout>
   );
 };

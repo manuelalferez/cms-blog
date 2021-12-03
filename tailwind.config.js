@@ -1,12 +1,15 @@
-// tailwind.config.js
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
-        fira: ["Fira"],
-        sans: ["Fira", "sans-serif"],
+        display: ["Libre Baskerville"],
+        serif: ["Sanchez"],
+        body: ["ABeeZee"],
+        mono: ["Fira Code"],
       },
     },
     screens: {
@@ -16,17 +19,56 @@ module.exports = {
       xl: "	1280px",
       "2xl": "1536px",
     },
+    colors: {
+      mypink: "#EC9192",
+      mylightpink: "#F0A8A9",
+      myblack: "#222222",
+      myblue: "#5C95FF",
+      mywhite: "#FFFDF7",
+      myorange: "#F1C40F",
+      transparent: "transparent",
+      current: "currentColor",
+      black: colors.black,
+      white: colors.white,
+      gray: colors.trueGray,
+      indigo: colors.indigo,
+      red: colors.rose,
+      yellow: colors.amber,
+    },
+    boxShadow: {
+      link: "0 -2px 0 0 rgba(92, 149, 255, 1) inset",
+      sm: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+      DEFAULT:
+        "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+      md: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+      lg: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+      xl: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+      "2xl": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+      "3xl": "0 35px 60px -15px rgba(0, 0, 0, 0.3)",
+      inner: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
+      none: "none",
+    },
+    backgroundImage: {
+      "code-buttons":
+        "url('https://ik.imagekit.io/manuelalferez/blog/bg/code_menu_SsmUuleJU.svg')",
+    },
   },
   variants: {
     extend: {
       borderStyle: ["responsive", "hover"],
       borderWidth: ["responsive", "hover"],
+      borderRadius: ["hover", "focus"],
       fontFamily: ["hover", "focus"],
       boxShadow: ["active"],
+      backgroundColor: ["active", "hover", "focus"],
+      padding: ["hover", "focus"],
     },
   },
   plugins: [],
   corePlugins: {
     fontFamily: true,
+    backgroundImage: true,
+    backgroundColor: true,
+    padding: true,
   },
 };

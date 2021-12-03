@@ -1,38 +1,19 @@
+import data from "../data/footer";
 const Footer = () => {
-  const socialList = [
-    {
-      name: "Twitter",
-      url: "https://twitter.com/manuelalferez",
-    },
-    {
-      name: "GitHub",
-      url: "https://github.com/manuelalferez",
-    },
-    {
-      name: "Telegram",
-      url: "https://t.me/manuelalferez",
-    },
-    {
-      name: "Medium",
-      url: "https://medium.com/me/stories/public",
-    },
-    {
-      name: "LinkedIn",
-      url: "https://www.linkedin.com/in/manuelalferez/",
-    },
-    {
-      name: "Instagram",
-      url: "https://www.instagram.com/manuelalferez_",
-    },
-  ];
-
   return (
-    <div className="flex justify-center flex-wrap border-t-2 p-2 w-screen text-center text-gray-500 font-light mt-7">
-      {socialList.map((item) => (
-        <a href={item.url} className="mr-2 p-1 hover:text-black">
-          {item.name}
-        </a>
-      ))}
+    <div className="flex flex-col items-center relative font-display text-base h-screen md:text-lg">
+      <div className="z-10 text-mywhite pb-10 flex justify-center w-screen absolute bottom-10 md:bottom-16">
+        <p>Made with</p> <img src={data.heartURL} class="px-2" />{" "}
+        <p>by Manuel</p>
+      </div>
+      <div className="flex justify-center flex-wrap z-10 absolute bottom-2 pb-4 lg:pb-8">
+        {data.social.map((item) => (
+          <a href={item.url} className="mr-4 z-10" target="_blank">
+            <img src={item.imageURL} class="h-8 w-8 fill-mywhite" />
+          </a>
+        ))}
+      </div>
+      <img src={data.bgURL} class="absolute bottom-0 h-40 w-screen z-0" />
     </div>
   );
 };
