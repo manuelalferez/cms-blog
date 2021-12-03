@@ -9,12 +9,14 @@
 html {
   @apply overflow-x-hidden bg-mywhite;
 }
+
 .about p {
   @apply font-serif text-base md:text-lg text-justify;
 }
 .about a,
-.featured-posts a {
-  @apply text-myblue hover:border-b-2 hover:border-myblue;
+.featured-posts a,
+.posts a {
+  @apply text-myblue no-underline hover:shadow-link;
 }
 
 .portfolio a {
@@ -29,6 +31,10 @@ html {
 .portfolio h2,
 .featured-posts h2 {
   @apply text-lg font-bold mb-4 text-myorange lg:text-xl;
+}
+
+.blog .title {
+  @apply text-3xl text-mypink mx-auto w-min;
 }
 
 .post {

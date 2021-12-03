@@ -19,7 +19,7 @@ const Layout = (props) => {
         />
       </Head>
       <Header />
-      <div className="mb-auto">{props.children}</div>
+      <div className="my-10 mb-16">{props.children}</div>
       <Footer />
     </div>
   );

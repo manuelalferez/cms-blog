@@ -14,34 +14,6 @@ const Index = ({ postList, about, projects, featuredPosts }) => {
         <About about={about} />
         <Portfolio projects={projects} />
         <FeaturedPosts featuredPosts={featuredPosts} />
-        <div className="flex justify-center">
-          <ul className="max-w-xl">
-            {postList.map((post) => {
-              return (
-                <li
-                  key={post.id}
-                  className="flex flex-col md:flex-row px-4 pb-4 "
-                >
-                  <span className="pr-10 md:pr-0 md:w-32 text-gray-600 font-light">
-                    {post.date}
-                  </span>
-                  <Link
-                    href={{
-                      pathname: "post/[id]",
-                      query: {
-                        id: post.id,
-                      },
-                    }}
-                  >
-                    <a className="text-blue-800 overflow-x-hidden max-w-max hover:bg-gray-100 font-medium">
-                      <RichText render={post.title} />
-                    </a>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
       </Layout>
     </div>
   );
@@ -49,9 +21,6 @@ const Index = ({ postList, about, projects, featuredPosts }) => {
 
 export const getStaticProps = async () => {
   const about = await client.getSingle("about");
-  const posts = await client.query(
-    Prismic.Predicates.at("document.type", "post")
-  );
   const projects = await client.query(
     Prismic.Predicates.at("document.type", "portfolio")
   );
@@ -59,21 +28,8 @@ export const getStaticProps = async () => {
     Prismic.Predicates.at("document.type", "featured-post")
   );
 
-  const postList = posts.results.map((post) => {
-    return {
-      id: post.slugs[0],
-      title: post.data.title,
-      date: post.data.date,
-    };
-  });
-
   return {
     props: {
-      postList: postList.sort((a, b) => {
-        const aDate = new Date(a.date);
-        const bDate = new Date(b.date);
-        return aDate < bDate ? 1 : -1;
-      }),
       about: about.data.description,
       projects: projects.results,
       featuredPosts: featuredPosts.results.sort((a, b) => {
