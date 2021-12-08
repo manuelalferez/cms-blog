@@ -31,6 +31,12 @@ export default {
       url: "https://www.linkedin.com/in/manuelalferez/",
     },
     {
+      alt: "Unsplash",
+      imageURL:
+        " https://ik.imagekit.io/manuelalferez/blog/social/unsplash_yPkPmJEE4o.svg",
+      url: "https://unsplash.com/@manuelalferez",
+    },
+    {
       alt: "Instagram",
       imageURL:
         "https://ik.imagekit.io/manuelalferez/blog/social/instagram_1_knxRwV2dp.svg",

@@ -9,7 +9,10 @@ const Footer = () => {
       <div className="flex justify-center flex-wrap z-10 absolute bottom-2 pb-4 lg:pb-8">
         {data.social.map((item) => (
           <a href={item.url} className="mr-4 z-10" target="_blank">
-            <img src={item.imageURL} class="h-8 w-8 fill-mywhite" />
+            <img
+              src={item.imageURL}
+              class="h-6 w-6 md:h-8 md:w-8 fill-mywhite"
+            />
           </a>
         ))}
       </div>
