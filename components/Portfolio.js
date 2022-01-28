@@ -14,7 +14,7 @@ const Portfolio = ({ projects }) => {
     });
 
     projectList.push(
-      <div className="border-4 border-mypink rounded mb-8 md:w-5/12 xl:w-4/12">
+      <div className="border-4 border-mypink rounded mb-8 lg:mx-2 md:w-5/12 xl:w-4/12">
         <img src={element.data.image.url} class="w-full h-40 object-cover" />
         <div className="p-2 px-4">
           <h2>{element.data.title[0].text}</h2>
