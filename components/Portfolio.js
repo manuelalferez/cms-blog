@@ -40,7 +40,9 @@ const Portfolio = ({ projects }) => {
           Portfolio
         </h1>
       </span>
-      <div className="md:flex md:justify-evenly font-serif">{projectList}</div>
+      <div className="md:flex md:justify-evenly flex-wrap	font-serif">
+        {projectList}
+      </div>
     </div>
   );
 };
