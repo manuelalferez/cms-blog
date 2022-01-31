@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://cdn-icons-png.flaticon.com/512/3959/3959542.png" alt="Logo" width="80">
+  <img src="https://ik.imagekit.io/manuelalferez/blog/big-logo_0UarpxMbY.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643644317362" alt="Logo" width="60">
 </p>
 
 
@@ -36,7 +36,7 @@
 
 ## Description
 
-![](https://i.ibb.co/St2GPrh/website.png)
+![](https://ik.imagekit.io/manuelalferez/blog/how-it-looks-like_U4NKXpHCl.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643644167170)
 
 ## Installation
 
