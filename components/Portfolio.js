@@ -22,8 +22,8 @@ const Portfolio = ({ projects }) => {
 
         <div class="card-body items-center text-center">
           <h2 class="card-title">{element.data.title[0].text}</h2>
-          <p className="h-20">{element.data.description[0].text}</p>
-          <span>{technologies}</span>
+          <p>{element.data.description[0].text}</p>
+          <span className="my-4">{technologies}</span>
           <div class="card-actions mt-4">
             <a
               class="btn btn-primary"

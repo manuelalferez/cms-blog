@@ -3,7 +3,10 @@ import data from "../data/header";
 
 const Header = () => {
   return (
-    <div data-theme="emerald" class="navbar bg-base-100 fixed z-20">
+    <div
+      data-theme="emerald"
+      class="navbar sm:flex sm:flex-wrap bg-base-100 fixed z-20"
+    >
       <div class="flex-1">
         <a class="btn btn-ghost normal-case text-xl" href="/">
           manuelalferez.com
