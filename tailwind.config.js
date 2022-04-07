@@ -110,5 +110,6 @@ module.exports = {
       "coffee",
       "winter",
     ],
+    darkTheme: "emerald",
   },
 };

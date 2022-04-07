@@ -7,7 +7,7 @@
 @tailwind utilities;
 
 html {
-  @apply overflow-x-hidden bg-mywhite;
+  @apply overflow-x-hidden bg-black;
 }
 
 .hero a{
