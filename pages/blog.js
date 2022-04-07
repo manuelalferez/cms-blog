@@ -11,7 +11,7 @@ const Blog = ({ postList }) => {
           <h1 class="sm:text-3xl text-2xl font-medium title-font mb-0 text-gray-900">
             Blog
           </h1>
-          <div class="h-1 w-20 bg-black rounded"></div>
+          <div class="h-1 w-20 bg-mygreen rounded"></div>
         </div>
         <Posts posts={postList} path={"post"} />
       </Layout>

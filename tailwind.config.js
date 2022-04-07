@@ -26,6 +26,7 @@ module.exports = {
       myblue: "#5C95FF",
       mywhite: "#FFFDF7",
       myorange: "#F1C40F",
+      mygreen: "#3DB868",
       transparent: "transparent",
       current: "currentColor",
       black: colors.black,
@@ -68,6 +69,8 @@ module.exports = {
     require("postcss-nested"),
     require("tailwindcss"),
     require("daisyui"),
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/aspect-ratio"),
   ],
   corePlugins: {
     fontFamily: true,

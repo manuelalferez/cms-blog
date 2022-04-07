@@ -14,64 +14,10 @@ html {
   @apply link;
 }
 
-.blog .title,
-.newsletter .title {
-  @apply text-3xl text-mypink mx-auto w-min;
+.embed {
+  @apply aspect-w-16 aspect-h-9 my-10;
 }
 
-.post {
-  @apply p-8 md:max-w-screen-md	 font-body md:text-lg;
-}
-.post .date {
-  @apply text-mylightpink font-serif;
-}
-
-.post img {
-  @apply lg:w-8/12 lg:mx-auto;
-}
-
-.post ul {
-  @apply pt-4 list-disc lg:text-xl pl-4;
-}
-
-.post .title {
-  @apply font-display text-xl md:text-3xl lg:text-4xl mb-4 text-center;
-}
-
-.post .title,
-.post h2,
-.post h3 {
-  @apply text-mypink font-display;
-}
-
-.post h2 {
-  @apply text-lg md:text-xl lg:text-2xl lg:text-3xl pt-10;
-}
-
-.post h3 {
-  @apply text-base md:text-lg lg:text-xl pt-8;
-}
-
-.post span {
-  @apply text-sm;
-}
-
-.post p {
-  @apply my-4 lg:text-xl;
-}
-
-.post pre {
-  @apply font-mono p-4 bg-myblack text-white rounded-md overflow-x-auto bg-code-buttons bg-no-repeat;
-}
-
-.post iframe {
-  @apply max-w-screen-sm mx-auto;
-}
-
-.back-button {
-  @apply w-12 h-12 mt-16 flex mx-auto hover:border-none rounded-full bg-myblue hover:p-1;
-}
-
-.back-button img {
+.embed iframe {
   @apply w-full h-full;
 }

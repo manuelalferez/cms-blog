@@ -60,12 +60,12 @@ const FeaturedPosts = ({ featuredPosts }) => {
     <div className="featured-posts mt-4">
       <div className="p-8 ">
         <div class="flex flex-col w-full border-opacity-50">
-          <div class="flex flex-wrap w-full mb-10">
+          <div class="flex flex-wrap w-full mb-10 mt-10">
             <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
               <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
                 Featured Posts
               </h1>
-              <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+              <div class="h-1 w-20 bg-mygreen rounded"></div>
             </div>
           </div>
         </div>

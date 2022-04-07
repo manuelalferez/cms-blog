@@ -3,22 +3,20 @@ import { RichText } from "prismic-reactjs";
 
 const Post = ({ content, title, date, backPath }) => {
   return (
-    <div className="w-screen flex-none md:flex pb-24 md:justify-center">
-      <div className="post">
+    <div
+      data-theme="emerald"
+      className="w-screen flex-none md:flex pb-24 md:justify-center"
+    >
+      <div className="post prose mt-20 p-8 md:p-0">
         <div className="flex flex-col items-center mb-10">
           <span className="title">
             <RichText render={title} />
           </span>
-          <span className="date">{date}</span>
+          <div class="badge badge-primary">{date}</div>
         </div>
         <div className="content">
           <RichText render={content} />
         </div>
-        <Link href={backPath}>
-          <a className="back-button">
-            <img src="https://ik.imagekit.io/manuelalferez/blog/backbutton_FD5MxYnnmQY.svg?updatedAt=1638528249452" />
-          </a>
-        </Link>
       </div>
     </div>
   );

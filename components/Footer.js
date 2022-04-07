@@ -1,7 +1,10 @@
 import data from "../data/footer";
 const Footer = () => {
   return (
-    <footer class="footer items-center p-4 bg-neutral text-neutral-content">
+    <footer
+      data-theme="emerald"
+      class="footer items-center p-4 bg-neutral text-neutral-content"
+    >
       <div class="items-center grid-flow-col">
         <p>Made with</p> <img src={data.heartURL} />
         <p>by Manuel</p>

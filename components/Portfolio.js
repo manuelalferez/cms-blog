@@ -49,11 +49,11 @@ const Portfolio = ({ projects }) => {
     <div className="portfolio p-8 pt-4">
       <div class="flex flex-col w-full border-opacity-50">
         <div class="flex flex-wrap w-full mb-10">
-          <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+          <div class="lg:w-1/2 w-full mb-6 lg:mb-0 mt-10">
             <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
               Portfolio
             </h1>
-            <div class="h-1 w-20 bg-black rounded"></div>
+            <div class="h-1 w-20 bg-mygreen rounded"></div>
           </div>
         </div>
       </div>
