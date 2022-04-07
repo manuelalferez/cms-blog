@@ -3,30 +3,36 @@ import { RichText } from "prismic-reactjs";
 
 const Posts = ({ posts, path }) => {
   return (
-    <div className="posts flex justify-center p-8 font-serif text-base md:text-lg md:mb-24">
-      <ul className="max-w-xl">
-        {posts.map((post) => {
-          return (
-            <li key={post.id} className="flex flex-col md:flex-row px-4 pb-4">
-              <span className="pr-10 md:w-40 text-mylightpink">
-                {post.date}
-              </span>
-              <Link
-                href={{
-                  pathname: `${path}/[id]`,
-                  query: {
-                    id: post.id,
-                  },
-                }}
-              >
-                <a className="overflow-x-hidden md:max-w-screen-sm">
-                  <RichText render={post.title} />
-                </a>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+    <div class="text-gray-600 body-font overflow-hidden">
+      <div class="container px-5 py-12 mx-auto">
+        <div class="-my-8 divide-y-2 divide-gray-100">
+          {posts.map((post) => {
+            return (
+              <div class="py-8 md:flex md:flex-wrap ">
+                <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                  <span class="mt-1 text-gray-500 text-sm">{post.date}</span>
+                </div>
+                <div class="md:flex-grow">
+                  <Link
+                    href={{
+                      pathname: `${path}/[id]`,
+                      query: {
+                        id: post.id,
+                      },
+                    }}
+                  >
+                    <a className="inline-flex items-center mt-4">
+                      <p class="text-xl font-medium text-gray-900 title-font mb-2">
+                        <RichText render={post.title} />
+                      </p>
+                    </a>
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };

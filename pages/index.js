@@ -1,17 +1,15 @@
 import Layout from "../components/Layout.js";
-import Link from "next/link";
 import { client } from "../config/prismic-configuration";
-import { RichText } from "prismic-reactjs";
 import Prismic from "prismic-javascript";
-import About from "../components/About.js";
+import Hero from "../components/Hero.js";
 import Portfolio from "../components/Portfolio.js";
 import FeaturedPosts from "../components/FeaturedPosts.js";
 
 const Index = ({ postList, about, projects, featuredPosts }) => {
   return (
-    <div>
+    <div data-theme="emerald">
       <Layout>
-        <About about={about} />
+        <Hero about={about} />
         <Portfolio projects={projects} />
         <FeaturedPosts featuredPosts={featuredPosts} />
       </Layout>

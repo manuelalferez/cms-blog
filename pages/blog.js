@@ -5,9 +5,14 @@ import Layout from "../components/Layout";
 
 const Blog = ({ postList }) => {
   return (
-    <div className="blog">
+    <div data-theme="emerald" className="blog">
       <Layout>
-        <h1 className="title">Blog</h1>
+        <div class="lg:w-1/2 w-full mb-6 lg:mb-0 mt-10 p-8">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-0 text-gray-900">
+            Blog
+          </h1>
+          <div class="h-1 w-20 bg-black rounded"></div>
+        </div>
         <Posts posts={postList} path={"post"} />
       </Layout>
     </div>

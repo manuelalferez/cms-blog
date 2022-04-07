@@ -9,9 +9,14 @@ const Newsletter = ({ postList, newsletterAbout }) => {
   return (
     <div className="newsletter">
       <Layout>
-        <h1 className="title">Newsletter</h1>
+        <div class="lg:w-1/2 w-full mb-6 lg:mb-0 mt-10 p-8">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-0 text-gray-900">
+            Newsletter
+          </h1>
+          <div class="h-1 w-20 bg-black rounded"></div>
+        </div>
         <div className="flex justify-center px-8 py-4">
-          <div className="about max-w-xl p-4">
+          <div className="max-w-xl p-4">
             <RichText render={newsletterAbout} />
           </div>
         </div>

@@ -7,26 +7,38 @@ const Portfolio = ({ projects }) => {
     let technologies = [];
     element.data.technologies.map((technology) => {
       technologies.push(
-        <li className="p-1 bg-myblack text-white rounded-lg m-1 font-mono text-sm">
-          {technology.item[0].text}
-        </li>
+        <li className="badge mr-1">{technology.item[0].text}</li>
       );
     });
 
     projectList.push(
-      <div className="border-4 border-mypink rounded mb-8 lg:mx-2 md:w-5/12 xl:w-4/12">
-        <img src={element.data.image.url} class="w-full h-40 object-cover" />
-        <div className="p-2 px-4">
-          <h2>{element.data.title[0].text}</h2>
-          <p>{element.data.description[0].text}</p>
-          <ul className="flex flex-wrap mt-4">{technologies}</ul>
-          <div className="flex justify-center">
-            <Link href={element.data.website[0].text}>
-              <a target="_blank">Website</a>
-            </Link>
-            <Link href={element.data.github[0].text}>
-              <a target="_blank">GitHub</a>
-            </Link>
+      <div class="mockup-window border w-96 bg-base-100 shadow-xl m-4">
+        <figure>
+          <img
+            src={element.data.image.url}
+            className="h-72 w-full object-cover"
+          />
+        </figure>
+
+        <div class="card-body items-center text-center">
+          <h2 class="card-title">{element.data.title[0].text}</h2>
+          <p className="h-20">{element.data.description[0].text}</p>
+          <span>{technologies}</span>
+          <div class="card-actions mt-4">
+            <a
+              class="btn btn-primary"
+              href={element.data.website[0].text}
+              target="_blank"
+            >
+              Website
+            </a>
+            <a
+              class="btn btn-primary"
+              href={element.data.github[0].text}
+              target="_blank"
+            >
+              GitHub
+            </a>
           </div>
         </div>
       </div>
@@ -35,14 +47,17 @@ const Portfolio = ({ projects }) => {
 
   return (
     <div className="portfolio p-8 pt-4">
-      <span className="lg:flex lg:justify-center">
-        <h1 className="font-display text-xl md:text-xl lg:text-2xl mb-4">
-          Portfolio
-        </h1>
-      </span>
-      <div className="md:flex md:justify-evenly flex-wrap	font-serif">
-        {projectList}
+      <div class="flex flex-col w-full border-opacity-50">
+        <div class="flex flex-wrap w-full mb-10">
+          <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
+              Portfolio
+            </h1>
+            <div class="h-1 w-20 bg-black rounded"></div>
+          </div>
+        </div>
       </div>
+      <div className="flex justify-evenly flex-wrap">{projectList}</div>
     </div>
   );
 };

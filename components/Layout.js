@@ -4,7 +4,7 @@ import Header from "./Header";
 
 const Layout = (props) => {
   return (
-    <div className="flex flex-col h-screen relative">
+    <div className="flex flex-col h-screen justify-between relative">
       <Head>
         <title>Manuel</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
