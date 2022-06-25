@@ -11,7 +11,7 @@ const Layout = (props) => {
         <link
           rel="icon"
           type="image/x-icon"
-          href="https://ik.imagekit.io/manuelalferez/blog/favicon_kHr-zJNSe.png?updatedAt=1638532848625"
+          href="https://ik.imagekit.io/manuelalferez/blog/favicon_bear_z6-BgaRmV.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656173062037"
         />
         <meta
           property="og:image"
