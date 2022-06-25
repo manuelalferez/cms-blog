@@ -5,7 +5,7 @@ import Hero from "../components/Hero.js";
 import Portfolio from "../components/Portfolio.js";
 import FeaturedPosts from "../components/FeaturedPosts.js";
 
-const Index = ({ postList, about, projects, featuredPosts }) => {
+const Index = ({ about, projects, featuredPosts }) => {
   return (
     <div data-theme="emerald">
       <Layout>

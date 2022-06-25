@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { RichText } from "prismic-reactjs";
 
 const Post = ({ content, title, date, backPath }) => {

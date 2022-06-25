@@ -1,4 +1,3 @@
-import Link from "next/link";
 import data from "../data/header";
 
 const Header = () => {
