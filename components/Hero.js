@@ -14,7 +14,6 @@ const About = ({ about }) => {
           <p class="mb-5">
             <RichText render={about} />
           </p>
-          w
         </div>
       </div>
     </div>
