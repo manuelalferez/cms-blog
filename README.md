@@ -24,7 +24,6 @@
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#description">Description</a></li>
     <li><a href="#installation">Installation</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -32,11 +31,6 @@
   </ol>
 </details>
 
-
-
-## Description
-
-![](https://ik.imagekit.io/manuelalferez/blog/how-it-looks-like_U4NKXpHCl.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643644167170)
 
 ## Installation
 
